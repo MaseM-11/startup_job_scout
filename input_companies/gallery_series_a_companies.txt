@@ -1,0 +1,1552 @@
+Daylight Security
+Managed agentic security services.
+
+
+Impulse Labs
+Next-generation kitchen stove.
+
+
+Mithril
+The AI omnicloud.
+
+
+AUI
+Stateful neuro-symbolic reasoning.
+
+
+Equals
+All-in-one GTM analytics.
+
+
+Decart
+A new era of real-time generative experiences.
+
+Lettuce
+Automated accounting/tax platform for solopreneurs.
+
+
+Flank
+Autonomous legal AI.
+
+Headlight
+Online therapy and mental health services. 
+
+
+Matic
+The world's most advanced floor cleaner.
+
+
+Symbolica
+Building structured cognition in machines.
+
+
+Ekho
+End-to-end vehicle commerce platform.
+
+
+Basic Capital
+The new way to 401(k).
+
+
+Relace
+LLMs for code generation.
+
+
+Outtake
+Cyber agents for any digital threat.
+
+
+Rainmaker
+Making Earth habitable.
+
+
+Speakeasy
+Generate MCP servers & SDKs from OpenAPI.
+
+Mosey
+The easy way to do state and local compliance.
+
+
+Sauron Systems
+Your home’s perception system.
+
+
+Bevel
+All your health apps in one.
+
+
+Kaizen
+Software for America's public services.
+
+
+VoidZero
+Next generation JavaScript toolchain.
+
+
+Arya Health
+Rewriting the future of post acute operations.
+
+
+Loti
+Deepfake protection.
+
+
+Fabric
+Intelligently connected care.
+
+
+Mem0
+The memory layer for AI.
+
+
+Ona
+Autonomous SWE agents.
+
+
+Firecrawl
+Turn websites into LLM-ready data.
+
+
+Sundial
+Modern analytics stack.
+
+
+Vega
+AI-native security analytics.
+
+
+Inngest
+Run reliable serverless background functions.
+
+
+Music AI
+AI audio models for music.
+
+
+Enterpret
+AI voice of customer software.
+
+
+Lila Sciences
+Building scientific superintelligence.
+
+
+Silna
+Make care your primary focus.
+
+
+Alex
+Autonomous AI recruiter.
+
+
+Listen Labs
+Autonomous market researcher.
+
+
+Manifold Bio
+Tissue-targeted medicines, designed in vivo.
+
+
+Netic
+The AI revenue engine for SMBs.
+
+
+HeyGen
+Making visual storytelling accessible to all.
+
+
+Mandolin
+Precision automation for specialty drugs.
+
+
+FurtherAI
+Domain-specific AI for insurance.
+
+
+Seneca
+Firefighting drones.
+
+
+Spline
+Create 3D web experiences.
+
+
+Gradient Labs
+AI customer support purpose-built for finance.
+
+
+Lumana
+AI-powered video security.
+
+
+Infisical
+Secrets management on autopilot.
+
+
+Nexus
+A Layer 1 for the AI era.
+
+
+Augment Market
+Buy & sell shares in private tech companies.
+
+
+Serval
+AI agents for IT.
+
+Ben
+Make benefits work for everyone, everywhere.
+
+
+Starbridge
+Unlocking public sector sales.
+
+
+Keycard
+Unified identity infrastructure for AI agents.
+
+
+Arbor Energy
+Carbon-negative power.
+
+Pivot
+Modern procurement platform.
+
+
+Lovable
+Full-stack AI engineer.
+
+
+Osmo
+Digitizing scent.
+
+
+Dust
+Build your team of AI agents.
+
+
+Tempo
+The blockchain designed for payments.
+
+
+Strella
+AI-moderated interviews.
+
+
+Finch (Legal)
+Pre-litigation, automated.
+
+
+Counsel Health
+The modern front door to healthcare.
+
+
+Privy
+Wallet infrastructure, built for scale.
+
+
+Warp
+Payroll and compliance for startups.
+
+
+Trunk
+Redefining writing software at scale.
+
+
+Pienso
+No-code tools for training AI models.
+
+
+Flow
+The Agile Requirements Management Platform.
+
+
+Mintlify
+The documentation platform of tomorrow.
+
+
+Auger
+Revolutionizing the global supply chain.
+
+
+Arta
+Digital family office.
+
+
+Mainstay
+Market intelligence platform for real estate.
+
+
+Kernel
+Browser infrastructure for web agents and automations.
+
+
+Datacurve
+Frontier code data for foundation models.
+
+
+Crosby
+Execute legal contracts faster.
+
+
+Junction
+Modernizing healthcare infrastructure.
+
+
+RockFi
+Wealth management platform.
+
+
+Glide
+Software that moves with you.
+
+
+webAI
+Enterprise-grade local AI applications.
+
+
+Mem
+Your AI knowledge assistant.
+
+
+Cal.com
+Open scheduling infrastructure.
+
+
+SafetyKit
+Protect your platform with AI agents.
+
+
+DualEntry
+Automated accounting suite.
+
+
+Summation
+Decision-grade AI platform.
+
+
+Inversion
+Making space a transportation layer for Earth.
+
+
+Dash0
+ AI-native observability platform.
+
+
+Charge Robotics
+Robots that build solar farms.
+
+&Open
+Certified B corp gifting.
+
+
+Assembly
+Create remarkable client experiences.
+
+
+Anything
+Build something real.
+
+
+Framework
+Consumer electronics to respect people and the planet.
+
+
+Tavus
+Building AI humans.
+
+
+Polars
+DataFrames for the new era.
+
+
+Truv
+Income and employment verification platform.
+
+
+Paradigm Health
+Clinical research re-engineered.
+
+
+Instant
+Revenue and retention on autopilot.
+
+
+Reevo
+A modern B2B revenue stack.
+
+
+Nomic AI
+Building explainable and accessible AI.
+
+
+Antimetal
+For everything that happens after you deploy.
+
+
+Delve
+AI-native compliance.
+
+
+Sling Money
+Stablecoin-based global payment app.
+
+
+OpenRouter
+The Unified Interface For LLMs.
+
+
+Polycam
+Truly cross-platform 3D capture.
+
+
+Hyperbolic
+Building the open-access AI cloud.
+
+
+OffDeal
+AI-native investment bank.
+
+
+Draftwise
+Contract drafting, reimagined with AI.
+
+
+Flex
+End-to-end finance platform for businesses.
+
+
+Scrunch
+Helping brands win AI search.
+
+
+Edera
+Secure-by-design Kubernetes.
+
+
+Edia
+The AI platform for K-12.
+
+
+Juicebox
+AI-powered recruiting platform.
+
+
+Plain
+Collaborative B2B support platform.
+
+
+Allium
+Blockchain data for every use case.
+
+
+Synthflow
+No-code platform for voice AI agents.
+
+
+Light
+Multinational accounting for modern companies.
+
+
+Nudge
+Whole-brain interfaces for everyday life.
+
+
+Copilot Money
+Money tracker app.
+
+
+Generalist AI
+Making general-purpose robots a reality.
+
+
+Neon Pay
+Commerce and payment tools for games.
+
+
+Tolans
+An embodied companion.
+
+
+Casca
+Process 10x more loans.
+
+
+Motif
+Where tomorrow’s buildings take shape.
+
+
+Succinct
+Making cryptography easier.
+
+Gordian Software
+Removing friction from travel.
+
+
+Seed
+Microbes for human and planetary health
+
+
+Cube
+The semantic layer for every data app. 
+
+
+Jump
+The unified fan experience platform.
+
+
+TELO
+EV trucks for cities.
+
+
+Greptile
+Using AI to catch bugs.
+
+
+Kaedim
+Production ready on-demand 3D models.
+
+
+RadiantGraph
+Intelligent personalization for healthcare.
+
+
+Goodfire
+Advancing AI interpretability research.
+
+
+Eli Health
+The first at-home instant hormone testing.
+
+
+Until
+Developing reversible cryopreservation.
+
+
+E2B
+Open-source cloud for AI agents.
+
+
+Salt
+AI for life sciences.
+
+
+tldraw
+The infinite canvas SDK.
+
+
+Spiral
+Multimodal warehousing.
+
+
+The Routing Company
+Powering the future of public transit.
+
+
+Tembo
+Background agents for technical teams.
+
+
+Centari
+Precision-driven deal intelligence.
+
+
+Arcade
+AI product creation platform.
+
+
+Vellum
+Build mission critical AI products.
+
+
+Bedrock Robotics
+Advanced autonomy for the built world.
+
+
+Tandem
+Accelerate access to medicine.
+
+
+Stable
+Virtual address + mailroom for startups.
+
+
+Atomic Industries
+AI-powered manufacturing.
+
+
+Fundamental Labs
+Building digital humans.
+
+
+Daylit
+An all-in-one working capital platform.
+
+
+Blacksmith
+The fastest way to run your GitHub Actions.
+
+
+Wispr Flow
+The best immersive voice keyboard.
+
+
+Macroscope
+An understanding engine for development.
+
+
+Rec
+Tech to power the future of recreation.
+
+
+Irregular
+Frontier AI security.
+
+
+Ambrook
+The financial layer powering American industry.
+
+
+Apothékary
+Mother Nature's farmacy.
+
+
+Shinkei
+Reshoring American seafood.
+
+
+Hyperbound
+AI sales coach.
+
+
+Birches Health
+Gambling addition treatment that works.
+
+
+Tessl
+Keep your AI agents on rails.
+
+
+Northwood
+A global, software-defined ground network.
+
+
+Arc
+Intelligent cash management.
+
+
+Monumental
+Automating on-site construction.
+
+
+Rox
+Sales productivity platform.
+
+
+Console
+AI coworker for IT.
+
+
+Dyna Robotics
+High performance general-purpose robots.
+
+Felt
+A better way to make maps.
+
+
+Prismic
+Headless page builder.
+
+
+Eudia
+Augment your legal team with AI.
+
+
+Comfy
+Building ComfyUI.
+
+
+Tollbit
+Helping websites protect and monetize their content.
+
+
+Pogo
+Unlocking the value of consumer data.
+
+
+Quilt
+A smarter way to heat/cool a home.
+
+
+Micro1
+The AI platform for human intelligence.
+
+
+Parahelp
+AI support agent.
+
+
+Chai Discovery
+Engineering better molecules using artificial intelligence.
+
+
+Anterior
+Lead your health plan into the future.
+
+
+Gensyn
+The network for machine intelligence.
+
+
+StackAI
+No-code platform to build AI agents.
+
+
+Hedra
+The generative media creation platform.
+
+
+Toma
+AI agents built for automotive dealerships.
+
+
+Greenlite AI
+Trusted AI agents for financial crime.
+
+
+Avalanche 
+Micro-fusion reactors.
+
+
+Koi
+Secure anything with an install button.
+
+
+Claim
+Get paid to eat and shop.
+
+
+Born
+AI friendship.
+
+
+CuspAI
+Frontier AI for breakthrough materials.
+
+
+Torus
+Modern energy storage.
+
+
+Dimension Labs
+Unstructured conversation analytics platform.
+
+
+Symbiotic
+Universal staking platform.
+
+
+Kite
+The base layer for the agentic web.
+
+
+Teton
+Advanced patient monitoring.
+
+
+Euclid
+Accelerating renewable energy projects.
+
+
+Buena
+Property management platform.
+
+
+Superpower
+The most advanced platform to optimize your health.
+
+
+Ellipsis Labs
+Building modern crypto finance.
+
+
+Senra Systems
+Supercharging electrical wire harness manufacturing.
+
+
+Inflection AI
+Enterprise AI that works for you.
+
+
+Hello Patient
+AI-powered healthcare communication.
+
+
+Cambium
+Where timber meets tech.
+
+
+Sola Security
+The no-BS security app studio.
+
+
+Augment
+AI teammate for logistics.
+
+
+Orchard
+The AI farming company.
+
+
+Sierra
+Conversational AI platform for businesses.
+
+
+Aetherflux
+Space solar power.
+
+
+Eyebot
+Helping people see the world more clearly.
+
+
+Kingdom Supercultures
+Natural functional ingredients that actually work.
+
+
+Antares
+Nuclear microreactors.
+
+
+Enode
+One integration, 1000+ energy devices.
+
+
+Pacific Fusion
+Nuclear fusion-based energy.
+
+
+Copper
+The Tesla of induction stoves.
+
+
+Hook
+AI agents to scale CS.
+
+
+Freed
+AI Scribe for happier clinicians.
+
+
+Two Dots
+Consumer underwriting agent.
+
+Cocoon
+Employee leave software for the modern era.
+
+
+AstroForge
+Deep space resources through asteroid mining.
+
+
+Miter
+The connected construction platform.
+
+Female Invest
+Closing the financial gender gap.
+
+
+The Nuclear Company
+America’s deployment platform for nuclear power.
+
+
+Upwind
+Cloud security happens at runtime.
+
+
+Conversion
+AI-native marketing automation.
+
+Playbook
+Cloud storage for creatives.
+
+
+Leland
+Marketplace for coaching sessions.
+
+
+Posh
+Maximizing IRL human connection.
+
+
+TinyFish
+World’s most deployed enterprise web agent.
+
+
+Doss
+Adaptive ERP and data platform.
+
+
+Odyssey
+Building superimagination.
+
+
+Northstar
+Financial wellness starts at work.
+
+
+Bluefish
+Brand monitoring for the age of AI.
+
+
+Ravenna
+Slack-first help desk for internal ops.
+
+
+Nuvo
+Make trade credit your competitive advantage.
+
+
+Footprint
+Frictionless KYC + KYB.
+
+
+Griffin
+Banking-as-a-service platform.
+
+
+Cline
+Open source AI coding.
+
+
+Fortuna Health
+Helping consumers navigate Medicaid. 
+
+
+Alix
+Wealth transfer platform.
+
+
+Sola
+AI-native, agentic process automation.
+
+
+Runway
+Financial modeling software.
+
+
+Composio
+The skill layer of AI.
+
+
+Delphi
+A digital you.
+
+
+Paraform
+Recruiting, made easy.
+
+
+Tavily
+Connect your agent to the web.
+
+
+Contextual AI
+Build specialized RAG agents.
+
+
+Mangrove
+Unlimited liquidity for DeFi.
+
+
+Lorikeet
+AI-powered customer support platform.
+
+
+Lightsource
+Supply chain management platform.
+
+Redo
+Everything your ecom business needs.
+
+
+Backflip AI
+3D AI for the physical world.
+
+
+Ivo
+The leader in AI contract review.
+
+
+Solve Intelligence
+AI for patents.
+
+Power
+Connecting patients with clinical trials.
+
+
+GigaML
+Voice AI agents for B2C companies.
+
+
+Salient
+AI servicing for auto lenders.
+
+
+Arcade
+Create effortlessly beautiful demos, in minutes.
+
+
+Pocus
+10x your sales team with AI.
+
+
+Baton
+Helping SMBs find buyers.
+
+
+Armada
+Full-stack edge computing platform.
+
+
+Latent Labs
+Making biology programmable.
+
+
+Basis
+AI agents built specifically for accountants.
+
+Momentum
+Sales insights platform for GTM teams. 
+
+
+Deepnote
+The AI-powered data workspace.
+
+Fireflies
+ChatGPT for meetings. 
+
+Peach
+API-first loan management platform.
+
+
+Pendulum
+Intelligent supply chain planning.
+
+
+Moonvalley
+The imagination research company.
+
+Evervault
+Flexible payments security and compliance.
+
+
+Dakota
+Business banking powered by stablecoins.
+
+
+Shepherd
+Insurance for commerical construction. 
+
+Liquid AI
+Efficient general-purpose AI at every scale.
+
+Grain
+AI-powered meeting recording tool.
+
+
+Jam
+1-click bug reports devs love.
+
+
+Chronograph
+Analytics for private capital.
+
+
+Rutter
+Connecting the world's business data.
+
+
+Whop
+The most addicting mall on the internet.
+
+
+autone
+Inventory management with impact.
+
+
+Dotwork
+Next-gen ops platform for the AI era.
+
+
+Numeric
+AI-powered close automation.
+
+
+Eventual
+Creators of Daft.
+
+
+V7
+The data engine for computer vision.
+
+
+TigerEye
+Modern BI for go-to-market.
+
+
+Resend
+Email for developers.
+
+
+Tailor
+Composable headless ERP.
+
+
+Lightdash
+The open source Looker alternative.
+
+
+Tandem Health
+Medical notes that write themselves.
+
+
+Palmstreet
+Live shopping for rare plants. 
+
+
+Fern
+Instant docs and SDKs for your API.
+
+
+Formance
+Open source financial infrastructure.
+
+
+Vacation
+Leisure-enhancing sunscreen.
+
+
+Please
+AI-powered personal assistants.
+
+
+Vapi
+Enterprise-ready Voice AI agents.
+
+
+SeriesAI
+GenAI video game engine.
+
+
+Adaptive Security
+Next-gen security training and simulations
+
+
+Jasper
+Create marketing content with AI.
+
+
+Kindred
+Members-only network for house sharing. 
+
+
+Slope
+B2B payments platform.
+
+
+Bezi
+Build games with contextual AI.
+
+
+Activeloop
+Enterprise AI search.
+
+
+Thread AI
+Mission critical AI infrastructure.
+
+
+Agentio
+The first ad platform for creator content.
+
+
+Apheris
+Governed, private, secure data access for ML and analytics.
+
+
+Rally
+Research operations platform.
+
+
+Vesta
+The future of mortgage infrastructure.
+
+
+Chalk
+The data platform for inference
+
+
+Superblocks
+Programmable internal tooling platform for developers.
+
+
+Vectara
+GenAI platform for enterprises.
+
+
+Distributional
+Deploy AI with confidence.
+
+
+Keep
+All-in-one finance system.
+
+
+Braintrust
+End-to-end platform for building AI applications.
+
+
+TensorWave
+Building the next wave of AI compute.
+
+
+Marqo
+Smarter search, higher conversion.
+
+Lavender
+AI-powered emails for sales teams.
+
+
+SuperHi
+Flexible online courses for creative people.
+
+
+Slite
+AI-powered knowledge base.
+
+Ravio
+Bring confidence to compensation.
+
+Particle
+AI-based news reader.
+
+
+StackOne
+Ship hundreds of integrations in days.
+
+
+Cinder
+Trust and safety operations platform.
+
+
+Sennos
+AI for fluidics and fermentation.
+
+
+TwelveLabs
+Multimodal foundation models for video understanding.
+
+
+Yonder
+Credit cards for modern rewards. 
+
+Gamma
+A new medium for presenting ideas.
+
+
+Artisan AI
+Artisan AI develops digital workers. 
+
+
+Every
+All-in-one back office built for founders.
+
+
+Jump AI
+AI notetaking for wealth advisors.
+
+
+Capsule
+Video editor for work.
+
+
+Cloaked
+Protect your data by generating unlimited identities.
+
+
+Roam
+Making home ownership 2x more affordable.
+
+
+Brightwave
+AI-powered financial assistant.
+
+
+Better Stack
+Modern observability tools.
+
+Carry
+Helping business owners build wealth.
+
+
+Playground
+A superhuman AI graphic designer.
+
+Marco
+Tech-enabled financing platform for LatAm SMEs.
+
+
+Railway
+Software deployment platforms for engineers.
+
+
+Token Security
+Machine-first identity security.
+
+Sydecar
+Start and run your own fund or SPV.
+
+
+Attention
+Enterprise-grade AI for sales teams.
+
+
+nsave
+Your trusted $ € £ account abroad.
+
+
+Convex
+Backend-as-a-service platform.
+
+
+Qdrant
+Open source vector database.
+
+
+Circle
+All-in-one community platform for creators.
+
+Adaptive
+Automating finance for builders.
+
+Vantage
+A cloud cost observability platform.
+
+
+New Lantern
+Automation radiolog-related tasks with AI.
+
+Alloy Automation
+Embedded iPaaS platform for product teams.
+
+Finmid
+Embedded financing solutions for SMBs.
+
+Anvil
+Document SDK for product teams.
+
+Upflow
+B2B payments platform.
+
+
+RemoFirst
+Hiring platform for remote workers.
+
+
+BRM
+AI-powered vendor management platform.
+
+Bunch
+Investment management platform.
+
+
+Seen Health
+Healthcare services for advanced age. 
+
+Xano
+Scalable no-code backend for apps.
+
+
+Physical Intelligence
+Machine learning for robots.
+
+
+Gumloop
+Automate any workflow with AI.
+
+Sybill
+AI-powered GTM workflow assistant.
+
+MoonPay
+Buy and sell crypto.
+
+
+PermitFlow
+Permitting software for builders and owners. 
+
+Sequel.io
+Host webinars right on your website.
+
+Teal
+Personal career growth platform. 
+
+Bardeen
+AI agents for workflow automation. 
+
+
+Tana
+AI-powered knowledge graph for work.
+
+
+Suger
+End-to-end rev engine for cloud marketplaces.
+
+Tofu
+B2B marketing on autopilot.
+
+
+Venn
+Redefining Canadian business banking.
+
+
+Paragon
+Embedded integration platform for SaaS.
+
+Podcastle
+Podcasting made simple.
+
+
+Stainless
+Generate best-in-class SDKs.
+
+
+Rootly
+The only multi-cloud on-call solution.
+
+
+FlutterFlow
+Build beautiful applications with ease. 
+
+
+Nilus
+Solving treasury operations.
+
+
+Ema
+Building a universal AI employee. 
+
+LlamaIndex
+Unleash LLMs over your data.
+
+
+Firsthand
+AI-powered brand agents.
+
+
+doinstruct
+Compliance platform for frontline workers.
+
+
+Lago
+Open source billing platform.
+
+
+Rive
+Create real-time interactive animations.
+
+
+Planhat
+Next-gen customer platform.
+
+
+Shortwave
+AI-native email for business.
+
+Levels
+Unlock your metabolic health. 
+
+Puzzle
+Modern accounting software. 
+
+
+Anima
+Next-gen care enablement platform.
+
+iyo
+Building AI audio computers.
+
+Maven
+Create cohort-based online courses.
+
+
+Pomerium
+Zero trust, identity-aware proxy.
+
+Warmly
+Warm leads platform for sales teams. 
+
+Meow
+Business banking with interest.
+
+
+Collective
+All-in-one financial platform for solopreneurs.
+
+
+Fractional
+Fractional home co-ownership platform.
+
+Daffy
+A smarter way to give.
+
+
+Worksome
+Hire and manage independent talent at scale.
+
+Welcome to the Jungle
+The better way to find a job in tech.
+
+Dovetail
+User research for modern teams. 
+
+
+Noetica
+Making sense of complex financial docs.
+
+
+Bridge
+Stablecoin API for developers
+
+
+Luzmo
+Embedded analytics platform.
+
+
+Function Health
+100+ lab tests and insights from top doctors.
+
+
+Zenlytic
+Self-service business intelligence.
+
+
+Lightspark
+Bitcoin payments platform.
+
+SpruceID
+Identity management platform.
+
+Boxo
+Turn apps into Super Apps.
+
+
+Defacto
+B2B lending platform.
+
+Ngrok
+Unified ingress platform for developers. 
+
+
+Roam
+Virtual office platform for remote teams.

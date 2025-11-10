@@ -1,0 +1,840 @@
+Sunflower Labs
+Autonomous security drone.
+
+
+Spellbook
+The AI copilot for transactional lawyers.
+
+
+Hummingbird
+Fighting financial crime with AI.
+
+
+Cradle
+Engineer better proteins, faster.
+
+
+Lightfield
+A new kind of CRM.
+
+
+Neko
+A better health check.
+
+
+Lightship
+First American all-electric RV.
+
+
+Poolside
+Frontier research to operational intelligence.
+
+
+Vizcom
+AI for industrial design.
+
+
+1X
+Humanoid robots for the home.
+
+
+Cartesia
+Ultra-realistic voice AI platform.
+
+
+Pallet
+AI workers for logistics.
+
+
+Sanas
+Real-time speech understanding platform.
+
+
+Slate
+Low-cost electric pickup truck.
+
+
+Unstructured
+Fully automated ETL tools for LLMs.
+
+
+Contra
+The commission-free creative network.
+
+
+Numeral
+Ecommerce sales tax on autopilot.
+
+
+ShopMy
+World-class creator marketing programs.
+
+
+Nooks
+AI sales assistant platform.
+
+
+Sesame AI
+AI voice assistant.
+
+
+LangChain
+Easily integrate LLMs into your apps.
+
+
+Replicate
+Run AI with an API.
+
+
+Comulate
+Transforming insurance with AI.
+
+
+Pulley
+Equity management for high growth startups.
+
+
+Nominal
+The connected hardware test stack.
+
+
+Zed
+Multiplayer code editor.
+
+
+Crux
+Efficient finance for America’s energy future.
+
+
+Campfire
+AI-first ERP for finance.
+
+
+Heirloom
+Direct air capture platform for carbon emissions.
+
+
+Reducto
+Document ingestion API.
+
+
+Cover
+Modular, thoughtful homes.
+
+
+Opal Security
+Security built for every identity.
+
+
+Reflection
+Frontier open intelligence accessible to all.
+
+
+David AI
+The data layer for audio AI.
+
+
+Unify
+Transform growth into a science.
+
+
+Seso
+Employee management built for ag.
+
+
+Quilter
+Physics-driven AI for electronics design.
+
+
+Assort Health
+AI agents for healthcare call centers.
+
+
+Filigran
+End-to-end cyber threat platform.
+
+
+Heidi Health
+AI care partner.
+
+Osmind
+Tech for breakthrough mental health research.
+
+
+Quo
+The new kind of business phone.
+
+
+Moment
+Engineering the future of fixed income.
+
+
+LiveKit
+Build realtime AI.
+
+
+Aalo Atomics
+Mass-manufactured nuclear plants.
+
+
+Promise
+Streamlining government payments and benefits.
+
+
+Blackbird
+Crypto restaurant rewards app.
+
+
+Cape
+A new ultra-private and secure mobile carrier.
+
+
+Eve
+Legal AI for plaintiff law firms.
+
+
+Modal
+The serverless platform for AI teams.
+
+
+MagicSchool
+All-in-one AI platform for educators.
+
+
+FERMÀT
+Tailor every touchpoint.
+
+
+PhysicsX
+Accelerating industrial innovation with AI.
+
+
+Coast
+Fuel and fleet payments made easy.
+
+
+Rows
+The world’s smartest spreadsheet.
+
+
+Gigs
+Launch a mobile service that runs itself.
+
+
+Patch
+Rebalance the planet.
+
+
+Apron
+Finance platform for small businesses.
+
+
+NewLimit
+Extending human healthspan.
+
+
+Slash
+Business banking for internet entrepreneurs.
+
+
+Metaview
+AI built for recruiting.
+
+
+Parabola
+Turn messy data into AI workflows.
+
+
+Modular
+VMware for the AI era.
+
+
+Numan
+Digital healthcare.
+
+
+Imbue
+Rekindling the dream of personal computing.
+
+
+Factory
+Agent-native software development.
+
+
+HappyRobot
+AI agents for freight operators.
+
+
+Turnkey
+Secure, flexible, and scalable wallet infrastructure.
+
+
+CodeRabbit
+AI code reviews.
+
+
+Padel Haus
+Luxury padel club & indoor courts.
+
+
+Craft
+Your space for notes, tasks, big ideas.
+
+
+Loyal
+Extending the lifespan of dogs.
+
+
+M0
+The universal stablecoin platform.
+
+
+Zama
+Open source cryptography.
+
+
+Recraft
+Image generation and editing tool.
+
+
+Aleph
+FP&A software for finance teams.
+
+
+Pika
+Create iconic videos with AI.
+
+
+Omnea
+Intelligent procurement intake and orchestration.
+
+
+Tabs
+Revenue automation for modern B2B.
+
+
+GreenLite
+Automating construction permitting.
+
+
+MarqVision
+A new era of brand protection.
+
+
+Air
+Automating creative operations.
+
+
+Bonfire Studios
+Developing Arkheron.
+
+
+Fyxer
+Your email & meeting partner.
+
+
+11x
+AI digital workers platform.
+
+Rainforest
+Payment processing for your platform.
+
+Pinecone
+Vector database for vector search.
+
+
+Typeface
+GenAI for enterprise content creation. 
+
+
+Recall.ai
+Universal API for real-time meeting data.
+
+
+Rogo
+Generative AI for investment banking.
+
+
+Exa
+Embeddings-based search infrastructure.
+
+
+Camber
+Admin automation for healthcare.
+
+
+Dagster
+Ship data pipelines with extraordinary velocity.
+
+
+Browserbase
+A web browser for your AI.
+
+
+Reka AI
+Complete multimodal AI solutions.
+
+
+Rain
+The enterprise stablecoin.
+
+
+Range
+All-in-one wealth management platform. 
+
+
+Common Room
+Customer intelligence platform.
+
+
+Debut
+Bioengineering beauty.
+
+
+Attio
+The CRM of the future.
+
+
+Haus
+Causal inference tools for marketers.
+
+
+Merge
+One API to 100s of integrations.
+
+
+Choco
+AI-driven platform for suppliers and restaurants.
+
+
+Origin
+A new era of wealth management.
+
+
+Roboflow
+Computer vision tools for developers and enterprises.
+
+Middesk
+Business identity platform. 
+
+
+Thatch
+Modern health benefits platform.
+
+
+Pylon
+The support platform built for B2B.
+
+
+Keychain
+AI-powered CPG manafacturing platform.
+
+
+incident.io
+Incident management platform.
+
+WorkOS
+Dev platform to implement enterprise-grade features.
+
+
+Campus
+Maximizing access to a world-class education.
+
+
+Mytra
+Automated robotic storage.
+
+
+Stytch
+Authentication infrastructure for developers.
+
+
+Stedi
+The only API-first healthcare clearinghouse.
+
+
+Hyphen
+Culinary operations on autopilot.
+
+Squint
+Make every operator an expert.
+
+
+Profound
+Be more visible in AI Search.
+
+
+Lindy
+Building AI employees without hype.
+
+
+Lyric
+A new era in supply chain.
+
+
+Rillet
+The AI-native ERP.
+
+
+Wander
+Luxury travel rentals.
+
+
+Oxide Computer Company
+On prem cloud computer.
+
+Wingspan
+Modern payroll for businesses.
+
+
+Lightyear
+Mobile trading platform for Europe.
+
+
+Prefect
+Workflow managment for data teams.
+
+
+april
+Embedded tax solutions.
+
+
+Augment Code
+AI coding platform for real software.
+
+Narmi
+Digitalizing credit unions and regional banking.
+
+
+Pinwheel
+Building the fourth credit bureau.
+
+
+TRM Labs
+Helping companies manage financial crime risk.
+
+
+Hume AI
+AI that interprets human emotion. 
+
+
+Prisma
+Serverless Postgres db, ORM & more.
+
+
+Bland
+The enterprise platform for AI phone calls.
+
+Magic
+Building an AI software engineer.
+
+
+Harmonic
+Building mathematical superintelligence.
+
+
+Ditto
+Resilient edge device connectivity.
+
+
+Krea
+Next-gen creative suite.
+
+
+Skild AI
+Building general purpose robotic intelligence.
+
+
+Savvy Wealth
+Digital-first wealth management.
+
+
+Graphite
+The developer productivity platform.
+
+Planned
+Plan corporate events faster, for less.
+
+
+Lumos
+The Autonomous Identity Platform.
+
+
+Primer
+Unified infrastructure for global payments.
+
+
+Warp
+The intelligent terminal.
+
+
+Raycast
+Developer command bar.
+
+
+Assembled
+The support operations platform.
+
+Loop
+Freight payments made simple.
+
+
+Helcim
+Affordable payments for your business.
+
+
+Clair
+The embedded earned wage access solution.
+
+
+Granola
+The AI-powered notepad.
+
+
+Story
+World's IP blockchain.
+
+
+Doppel
+AI-native digital risk protection.
+
+
+Wrtn
+Bring AGI close to people.
+
+
+Checkly
+Test and monitor your apps and APIs at scale.
+
+
+Plenful
+AI workflow platform for healthcare.
+
+
+Rho
+Business banking platform.
+
+
+Pliant
+Corporate card platform.
+
+Italic
+Unbranded luxury goods.
+
+
+Froda
+Financing for small business.
+
+
+Nourish
+Connecting people with registered dietitians.
+
+
+Method
+The future of financial account connectivity.
+
+
+Eco
+Onchain actions to one-click stablesends.
+
+
+Atlas Card
+Modern concierge and spend management platform.
+
+
+Courier
+Plug-and-play notification platform.
+
+
+Port IO
+Internal tools hub for devs.
+
+
+Hebbia
+AI agents for financial services.
+
+
+Butlr
+Privacy-first ambient sensing platform.
+
+
+Neon
+Serverless Postgres in the cloud.
+
+
+Array
+Embedded finance products platform.
+
+Volt
+The global infrastructure for real-time payments.
+
+
+Nomba
+Enabling cashless Africa
+
+
+Anomalo
+Enterprise data quality monitoring.
+
+
+Bureau
+No-code identity decisioning platform.
+
+MotherDuck
+Serverless data analytics with DuckDB.
+
+Podimo
+Netflix for podcasts. 
+
+Sesame
+Half-priced, high-quality health care.
+
+Adept AI
+Useful general intelligence.
+
+Transcend
+Enterprise-grade data privacy infrastructure.
+
+
+Zeal
+Modern payroll platform.
+
+
+Encord
+The data development platform for AI.
+
+Orb
+Modern pricing platform for software companies.
+
+Ultrahuman
+Real-time nutrition and fitness tracking.
+
+
+Ghost
+B2B marketplace for surplus inventory.
+
+
+Tinybird
+Helping teams build real-time data products.
+
+Scribe
+Turn any process into step-by-step guides. 
+
+
+StackBlitz
+Creators of Bolt.
+
+
+Alice & Bob
+Building the first quantum computer.
+
+
+Swan
+Embedded finance products at scale.
+
+
+Suno
+Make any song you can imagine.
+
+
+Together AI
+The future of AI is open-source.
+
+Mistral
+Fast, open-source and secure language models.
+
+
+Taktile
+The risk platform you’ll love using.
+
+Beehiiv
+Newsletter platform for creators.
+
+
+Moderne
+Mass-scale automated code refactoring.
+
+Omni
+Flexible business intelligence platform.
+
+Convictional
+Reinventing business operations.
+
+Shortcut
+Project management for software teams. 
+
+PartnerStack
+Partnership management platform.
+
+LemFi
+International payments for immigrants.
+
+Fay
+Find dietitians & nutritionists.
+
+
+Mynt
+AI-powered corporate cards and spend management.
+
+Census
+Data Activation and Reverse ETL platform. 
+
+Finch
+The unified API for employment systems. 
+
+Simulate
+Plant-based chicken.
+
+Nectar
+Employee recognition software.
+
+LayerZero
+Omnichain interoperability protocol.
+
+Deepgram
+Voice AI platform.
+
+Orum
+Live customer convo platform.
+
+Clear Street
+Modernizing the brokerage ecosystem.
+
+Flare
+Threat exposure management platform.
+
+Cometeer
+Flash-frozen coffee capsules.
+
+Greenly
+Carbon management platform for SMBs.
+
+Grin
+All-in-one creator management platform.
+
+Trullion
+AI-enhanced accounting platform.
+
+Juro
+AI-enabled contract automation platform.
+
+Duffel
+Sell travel without complexity.
+
+Socket
+Developer-first security platform.
+
+Flatfile
+Smart APIs for file-based data import.
+
+Loop
+Turn refunds into exchanges.
+
+Pitch
+Presentation software for modern teams.
+
+Mutiny
+Personalized B2B marketing platform.
+
+Chili Piper
+Meeting automation platform.

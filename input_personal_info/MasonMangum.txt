@@ -1,0 +1,50 @@
+
+Mason Mangum
+512-786-8247 | mangummason@gmail.com | linkedin.com/in/mason-mangum/
+EDUCATION
+Texas A&M University	College Station, TX
+Master’s of Science in Industrial Engineering | GPA: 3.6	August 2024 - Expected Dec 2025
+Coursework: Quality Engineering, Simulation Methods, Production and Inventory Controls, Linear Programming, Nonlinear Optimization, Principles of Manufacturing, Human Factors Engineering, Deep RL, Deep Learning
+Track & Field Student-Athlete
+NCAA National Champions, SEC Champions, 2x All-American (Long Jump & 4x100 Relay).
+
+University of California, Berkeley	Berkeley, CA
+Bachelor of Arts in Data Science, Concentration in Economics | GPA: 3.65	January 2020 - May 2024
+Coursework: Computer Programs (CS61A), Data Structures (CS61B), Data Science (DATA100), Probability, AI, ML, Linear Algebra, Financial Econ, Econometrics, Discrete Math, Cognitive Science, Philosophy of Neuroscience
+Football Student-Athlete — Four Year Letterman
+35+ hours per week (fall semester) of practice, weights, film, and travel to prepare for excellence as a team.
+Track & Field Student-Athlete — Four Year Letterman
+Golden Bear Award (highest GPA on team), 4-time PAC-12 Honor Roll, All-American, School Record holder.
+Cal Athletes in Tech Organization — Founder
+Created a student org to unite similar-valued athletes and mentor younger peers beyond athletics at Berkeley.
+Hosted multiple events with 40+ athletes, including opportunities to connect with VCs, founders, and engineers.
+
+EXPERIENCE
+Nucleus Talent	San Francisco, CA
+Entrepreneur in Residence	Sep 2025 - Oct 2025
+Developed a VC investor ranking index via public data, VC interviews, and partners (AngelList, fund of funds, etc).
+Implemented and managed end to end ops for a new podcast; including vendor bookings, brand, and launch strategy.
+Conducted candidate research, drafted meeting recaps, and contributed to weekly client search updates.
+
+Gaingels	San Francisco, CA
+Venture Analyst	July 2023 - Jan 2024
+Sourced 3 successful investments; coordinated initial relationship and negotiation with founders.
+Selected Investment — Series B Biotech: Cancer therapy drug company entering clinical trials (Closed Apr 2024)
+Sourced investment alongside Thiel Bio and Presight Capital, supported GP during 6 month recap process.
+
+Berkeley Endowment Management Company	San Francisco, CA
+Endowment Management Investment Fellow	June 2022 - August 2022
+Shadowed investment manager meetings across all asset classes — VC, PE, equities, hedge funds, and real assets.
+Research and Presentation — The Energy Transition: Energy Production. Electricity, and Industrial Manufacturing
+Identified trends and investment opportunities in energy production in the US, focusing on implications to the electric grid and industrial sectors, and presented my research to the CIOs of 6 endowments totaling over $30bn in AUM.
+
+REX Real Estate	Redwood City, CA
+Data Science Intern	June 2021 – August 2021
+Contributed to the development of data operation flows for a large scale ML project predicting home sale prices.
+Established an experimental design framework to standardize data-driven decision making across the company.
+Successfully built and implemented an A/B testing program modified to include prior beliefs in order to minimize time and data required to conclude experiments, while maintaining 95% confidence in accurate decision making.
+
+PROJECTS, SKILLS, & INTERESTS
+Aggies Invent: Navy: Won 48 hour design sprint competition sponsored by Lockheed Martin and the US Navy.
+Software: Python, Java, TensorFlow, SK-Learn, SQL, Figma, Excel, PowerPoint
+Interests: Consciousness and agency, the future of athletics (track and field), and sci-fi media
