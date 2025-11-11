@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Iterable, MutableSet, Tuple
+from typing import Iterable, MutableSet, Sequence, Tuple
 
 import gradio as gr
 import pandas as pd
@@ -10,6 +10,8 @@ import sys
 
 INTERESTED_PATH = Path("apply_data/interested_jobs.csv")
 APPLIED_PATH = Path("apply_data/applied_jobs.csv")
+INTERESTED_HISTORY_PATH = Path("apply_data/interested_jobs_history.csv")
+APPLIED_HISTORY_PATH = Path("apply_data/applied_jobs_history.csv")
 DISPLAY_COLUMNS = [
     "Company",
     "title",
@@ -37,6 +39,40 @@ def _load_index_set(path: Path) -> MutableSet[int]:
             except Exception:
                 return set()
     return set()
+
+
+def _append_job_record(
+    idx: int,
+    job_records: Sequence[dict[str, object]] | None,
+    path: Path,
+) -> None:
+    """Append the job at ``idx`` from ``job_records`` to ``path``."""
+    if job_records is None:
+        return
+
+    try:
+        record = job_records[int(idx)]
+    except (ValueError, TypeError, IndexError):
+        return
+
+    if not isinstance(record, dict):
+        return
+
+    new_row = pd.DataFrame([record])
+
+    if path.exists():
+        try:
+            existing = pd.read_csv(path)
+        except Exception:
+            existing = pd.DataFrame()
+    else:
+        existing = pd.DataFrame()
+
+    combined = pd.concat([existing, new_row], ignore_index=True)
+    combined = combined.drop_duplicates()
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    combined.to_csv(path, index=False)
 
 
 def _save_index_set(indices: Iterable[int], path: Path, column_name: str) -> None:
@@ -68,6 +104,7 @@ def _handle_interest_change(
     idx: int,
     interested_state: Iterable[int] | None,
     applied_state: Iterable[int] | None,
+    job_records: Sequence[dict[str, object]] | None,
 ) -> Tuple[
     str,
     list[int],
@@ -79,27 +116,41 @@ def _handle_interest_change(
     interested_selection: MutableSet[int] = set(interested_state or [])
     applied_selection: MutableSet[int] = set(applied_state or [])
 
+    try:
+        idx_int = int(idx)
+    except (TypeError, ValueError):
+        return (
+            f"Interested jobs: {len(interested_selection)} saved",
+            sorted(interested_selection),
+            sorted(applied_selection),
+            gr.update(),
+            gr.update(),
+        )
+
+    is_now_interested = bool(is_checked)
+
     status_msg, interested_selection = _toggle_selection(
-        int(idx),
-        bool(is_checked),
+        idx_int,
+        is_now_interested,
         interested_selection,
         INTERESTED_PATH,
         "interested_index",
         "Interested jobs",
     )
 
-    idx = int(idx)
-    is_now_interested = bool(is_checked)
+    if is_now_interested:
+        _append_job_record(idx_int, job_records, INTERESTED_HISTORY_PATH)
+
     applied_visible = is_now_interested
 
-    if not is_now_interested and idx in applied_selection:
-        applied_selection.discard(idx)
+    if not is_now_interested and idx_int in applied_selection:
+        applied_selection.discard(idx_int)
         _save_index_set(applied_selection, APPLIED_PATH, "applied_index")
         status_msg = (
             f"{status_msg} | Applied jobs: {len(applied_selection)} saved"
         )
 
-    applied_value = idx in applied_selection if applied_visible else False
+    applied_value = idx_int in applied_selection if applied_visible else False
 
     checkbox_update = gr.update(
         value=applied_value,
@@ -120,18 +171,29 @@ def _handle_applied_change(
     is_checked: bool,
     idx: int,
     applied_state: Iterable[int] | None,
+    job_records: Sequence[dict[str, object]] | None,
 ) -> Tuple[str, list[int]]:
     """Update applied selection for a job."""
     applied_selection: MutableSet[int] = set(applied_state or [])
 
+    try:
+        idx_int = int(idx)
+    except (TypeError, ValueError):
+        return f"Applied jobs: {len(applied_selection)} saved", sorted(applied_selection)
+
+    is_now_applied = bool(is_checked)
+
     status_msg, applied_selection = _toggle_selection(
-        int(idx),
-        bool(is_checked),
+        idx_int,
+        is_now_applied,
         applied_selection,
         APPLIED_PATH,
         "applied_index",
         "Applied jobs",
     )
+
+    if is_now_applied:
+        _append_job_record(idx_int, job_records, APPLIED_HISTORY_PATH)
 
     return status_msg, sorted(applied_selection)
 
@@ -227,6 +289,7 @@ def build_interface(df: pd.DataFrame) -> gr.Blocks:
 
     job_summaries = [_format_job_summary(row) for _, row in df.iterrows()]
     job_markdowns = [_format_job_markdown(row) for _, row in df.iterrows()]
+    job_records = df.to_dict("records")
 
     with gr.Blocks(title="Job Application Workflow") as demo:
         gr.Markdown(
@@ -238,6 +301,7 @@ def build_interface(df: pd.DataFrame) -> gr.Blocks:
 
         interested_state = gr.State(sorted(interested_indices))
         applied_state = gr.State(sorted(applied_indices))
+        job_data_state = gr.State(job_records)
         status = gr.Markdown("Ready.")
 
         interested_components: list[tuple[gr.Checkbox, gr.Number]] = []
@@ -289,6 +353,7 @@ def build_interface(df: pd.DataFrame) -> gr.Blocks:
                     interested_idx,
                     interested_state,
                     applied_state,
+                    job_data_state,
                 ],
                 outputs=[
                     status,
@@ -301,12 +366,13 @@ def build_interface(df: pd.DataFrame) -> gr.Blocks:
 
             applied_cb.change(
                 fn=_handle_applied_change,
-                inputs=[applied_cb, applied_idx, applied_state],
+                inputs=[applied_cb, applied_idx, applied_state, job_data_state],
                 outputs=[status, applied_state],
             )
 
         gr.Markdown(
-            "Saved selections live in `interested_jobs.csv` and `applied_jobs.csv`."
+            "Saved selections live in `interested_jobs.csv` and `applied_jobs.csv`. "
+            "All checked jobs are archived in the history CSV files."
         )
 
     return demo
