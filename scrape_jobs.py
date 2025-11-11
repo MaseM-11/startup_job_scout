@@ -21,8 +21,28 @@ from playwright.async_api import async_playwright
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import sys
 from pathlib import Path
+from typing import Optional
 
-exa = os.getenv("EXA_API_KEY")
+
+def _create_exa_client() -> Optional[Exa]:
+    api_key = os.getenv("EXA_API_KEY")
+    if not api_key:
+        return None
+    try:
+        return Exa(api_key)
+    except Exception as exc:
+        raise RuntimeError("Failed to initialize Exa client") from exc
+
+
+EXA_CLIENT = _create_exa_client()
+
+
+def _require_exa_client() -> Exa:
+    if EXA_CLIENT is None:
+        raise RuntimeError(
+            "Missing EXA_API_KEY environment variable. Set it before running scrape_jobs."
+        )
+    return EXA_CLIENT
 
 
 def get_company_url(company_name, description):
@@ -30,7 +50,9 @@ def get_company_url(company_name, description):
     Uses Exa API. Takes in a company name and description, then outputs that company's homepage url. 
     '''
     q = f'{company_name} {description} site:.com OR site:.io OR site:.ai OR site:.co'
-    res = exa.search(
+    client = _require_exa_client()
+
+    res = client.search(
         query=q,
         category="company",
         num_results=5
@@ -60,7 +82,9 @@ def get_job_urls(company_name):
         print(f"⚠️ Connection error for: {company_name} ({url})")
         return None
     
-    result = exa.get_contents(
+    client = _require_exa_client()
+
+    result = client.get_contents(
       [url],
       text = {
         "max_characters": 500
@@ -107,7 +131,9 @@ def get_jobs(company_name):
         print(f"⚠️ Connection error for: {company_name} ({url})")
         return []
     
-    result = exa.get_contents(
+    client = _require_exa_client()
+
+    result = client.get_contents(
       [url],
       text = True,
       summary={
@@ -170,6 +196,12 @@ def main():
 
     input_file = sys.argv[1]
     test_mode = "--test" in sys.argv
+
+    try:
+        _require_exa_client()
+    except RuntimeError as exc:
+        print(f"❌ {exc}")
+        sys.exit(1)
 
     gallery_list = open(f'input_companies/{input_file}').read()
 

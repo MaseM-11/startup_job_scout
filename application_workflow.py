@@ -58,6 +58,77 @@ def _parse_job_payload(payload: str) -> dict[str, str]:
     return {column: _normalize_value(data.get(column, "")) for column in PERSIST_COLUMNS}
 
 
+def _format_job_summary(row: pd.Series) -> str:
+    """Create a compact markdown summary for the interested workflow."""
+
+    title = row.get("title", "Role")
+    company = row.get("Company", "Company")
+    location = row.get("location", "")
+    posted = row.get("date_posted", "")
+    score = row.get("final fit", "")
+    years = row.get("yrs exp req", "")
+
+    header = f"{company} — {title}"
+    meta_bits: list[str] = []
+    if pd.notna(location) and str(location):
+        meta_bits.append(f"📍 {location}")
+    if pd.notna(posted) and str(posted):
+        meta_bits.append(f"🗓️ {posted}")
+    if pd.notna(score) and str(score) != "":
+        meta_bits.append(f"🏅 Fit score: {score}")
+    if pd.notna(years) and str(years) != "":
+        meta_bits.append(f"💼 Experience req: {years}")
+
+    meta_line = " • ".join(meta_bits)
+    return f"{header}\n{meta_line}" if meta_line else header
+
+
+def _format_job_markdown(row: pd.Series) -> str:
+    """Create detailed markdown for a job row."""
+
+    title = row.get("title", "Role")
+    company = row.get("Company", "Company")
+    location = row.get("location", "Location unknown")
+    posted = row.get("date_posted", "")
+    score = row.get("final fit", "")
+    years = row.get("yrs exp req", "")
+
+    header = f"### {company} — {title}"
+    meta_bits = []
+    if location:
+        meta_bits.append(f"📍 {location}")
+    if posted:
+        meta_bits.append(f"🗓️ {posted}")
+    if score != "":
+        meta_bits.append(f"🏅 Fit score: {score}")
+    if years != "":
+        meta_bits.append(f"💼 Experience req: {years}")
+    meta = "  \n" + "  •  ".join(meta_bits) if meta_bits else ""
+
+    link = row.get("link", "")
+    if link:
+        link_md = f"[Job link]({link})"
+    else:
+        link_md = ""
+
+    description = row.get("role description", "")
+    responsibilities = row.get("role responsibilities", "")
+    requirements = row.get("role reqs", "")
+
+    details = []
+    if description:
+        details.append(f"**Description**\n{description}")
+    if responsibilities:
+        details.append(f"**Responsibilities**\n{responsibilities}")
+    if requirements:
+        details.append(f"**Requirements**\n{requirements}")
+
+    details_md = "\n\n".join(details)
+    extras = f"\n\n{link_md}" if link_md else ""
+
+    return f"{header}{meta}\n\n{details_md}{extras}"
+
+
 def _load_saved_jobs(path: Path) -> dict[str, dict[str, str]]:
     """Return persisted job selections keyed by job identifier."""
 
