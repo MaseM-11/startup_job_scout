@@ -6,7 +6,29 @@ from typing import Iterable, MutableSet, Sequence, Tuple
 import gradio as gr
 import pandas as pd
 import sys
+import numpy as np
 
+from dotenv import load_dotenv
+from google.oauth2.service_account import Credentials
+import gspread
+import os
+
+load_dotenv()
+
+## Google Sheets API setups
+SERVICE_ACCOUNT_FILE = os.getenv("GOOGLE_SERVICE_ACCOUNT_PATH")
+SHEET_NAME = os.getenv("GOOGLE_SHEET_NAME")
+TAB_NAME_INTERESTED = os.getenv("GOOGLE_SHEET_TAB_INTERESTED")
+TAB_NAME_APPLIED = os.getenv("GOOGLE_SHEET_TAB_APPLIED")
+# Auth
+scope = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive"]
+creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scope)
+google = gspread.authorize(creds)
+# Open sheet and tab
+sheet_interested = google.open(SHEET_NAME).worksheet(TAB_NAME_INTERESTED)
+sheet_applied = google.open(SHEET_NAME).worksheet(TAB_NAME_APPLIED)
 
 INTERESTED_PATH = Path("apply_data/interested_jobs.csv")
 APPLIED_PATH = Path("apply_data/applied_jobs.csv")
@@ -25,6 +47,15 @@ DISPLAY_COLUMNS = [
     "yrs exp req",
 ]
 
+def ensure_header(ws, columns):
+    first = ws.row_values(1)
+    if first != columns:
+        ws.update(range_name="A1", values=[columns])
+
+ensure_header(sheet_interested, DISPLAY_COLUMNS)
+ensure_header(sheet_applied, DISPLAY_COLUMNS)
+
+
 def _load_index_set(path: Path) -> MutableSet[int]:
     """Return previously saved checkbox indices from ``path``."""
     if path.exists():
@@ -40,39 +71,51 @@ def _load_index_set(path: Path) -> MutableSet[int]:
                 return set()
     return set()
 
-
 def _append_job_record(
     idx: int,
     job_records: Sequence[dict[str, object]] | None,
     path: Path,
+    sheet,
 ) -> None:
-    """Append the job at ``idx`` from ``job_records`` to ``path``."""
+    """Append the job at ``idx`` to local CSV and append ONLY that row to Google Sheets."""
     if job_records is None:
         return
 
+    # --- pick the selected record safely ---
     try:
         record = job_records[int(idx)]
     except (ValueError, TypeError, IndexError):
         return
-
     if not isinstance(record, dict):
         return
 
     new_row = pd.DataFrame([record])
 
-    if path.exists():
-        try:
-            existing = pd.read_csv(path)
-        except Exception:
-            existing = pd.DataFrame()
-    else:
+    # --- update local history CSV (idempotent) ---
+    try:
+        existing = pd.read_csv(path) if path.exists() else pd.DataFrame()
+    except Exception:
         existing = pd.DataFrame()
 
-    combined = pd.concat([existing, new_row], ignore_index=True)
-    combined = combined.drop_duplicates()
-
+    combined = pd.concat([existing, new_row], ignore_index=True).drop_duplicates()
     path.parent.mkdir(parents=True, exist_ok=True)
     combined.to_csv(path, index=False)
+
+     # --- order by the SHEET HEADER and coerce to JSON-safe types ---
+    header = sheet.row_values(1)  # first row is the header
+    def to_jsonable(v):
+        if v is None or (isinstance(v, float) and pd.isna(v)): return ""
+        if isinstance(v, np.integer): return int(v)
+        if isinstance(v, np.floating): return float(v) if np.isfinite(v) else ""
+        if isinstance(v, (list, tuple, set)): return " • ".join(map(str, v))
+        if isinstance(v, (bool, int, float, str)): return v
+        return str(v)
+
+    row_dict = new_row.iloc[0].to_dict()
+    row_values = [to_jsonable(row_dict.get(col, "")) for col in header]
+
+    # --- append exactly one row in correct order ---
+    sheet.append_row(row_values, value_input_option="USER_ENTERED")
 
 
 def _save_index_set(indices: Iterable[int], path: Path, column_name: str) -> None:
@@ -139,7 +182,7 @@ def _handle_interest_change(
     )
 
     if is_now_interested:
-        _append_job_record(idx_int, job_records, INTERESTED_HISTORY_PATH)
+        _append_job_record(idx_int, job_records, INTERESTED_HISTORY_PATH, sheet_interested)
 
     applied_visible = is_now_interested
 
@@ -193,7 +236,7 @@ def _handle_applied_change(
     )
 
     if is_now_applied:
-        _append_job_record(idx_int, job_records, APPLIED_HISTORY_PATH)
+        _append_job_record(idx_int, job_records, APPLIED_HISTORY_PATH, sheet_applied)
 
     return status_msg, sorted(applied_selection)
 

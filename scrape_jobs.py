@@ -21,8 +21,27 @@ from playwright.async_api import async_playwright
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import sys
 from pathlib import Path
+from dotenv import load_dotenv
+from google.oauth2.service_account import Credentials
+import gspread
 
-exa = os.getenv("EXA_API_KEY")
+
+load_dotenv()
+exa_api_key = os.getenv("EXA_API_KEY")
+exa = Exa(api_key=exa_api_key)
+
+## Google Sheets API setups
+SERVICE_ACCOUNT_FILE = os.getenv("GOOGLE_SERVICE_ACCOUNT_PATH")
+SHEET_NAME = os.getenv("GOOGLE_SHEET_NAME")
+TAB_NAME = os.getenv("GOOGLE_SHEET_TAB_SCRAPED")
+# Auth
+scope = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive"]
+creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scope)
+google = gspread.authorize(creds)
+# Open sheet and tab
+sheet = google.open(SHEET_NAME).worksheet(TAB_NAME)
 
 
 def get_company_url(company_name, description):
@@ -222,6 +241,8 @@ def main():
         print(df_final['title'])
     base_name = Path(input_file).stem
     df_final.to_csv(f"scraped_data/jobs_scraped_{base_name}.csv", index=False)
+    sheet.append_rows(df_final.values.tolist(), value_input_option="USER_ENTERED")
+    print("✅ Data appended to Google Sheet!")
 
 if __name__ == "__main__":
     main()
