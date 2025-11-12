@@ -3,17 +3,5 @@ Normal
 Rethinking semiconductors from the ground up.
 
 
-MeritFirst
-Rebuilding America's meritocratic infrastructure.
-
-
-Letta
-Stateful agents that remember and learn.
-
-
 Yutori
 AI agents for everyday life.
-
-
-Kick
-Modern accounting platform for startups.

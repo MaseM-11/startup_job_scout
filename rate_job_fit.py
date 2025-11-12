@@ -14,9 +14,28 @@ from playwright.async_api import async_playwright
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import sys
 from pathlib import Path
+from dotenv import load_dotenv
+from google.oauth2.service_account import Credentials
+import gspread
 
-exa = os.getenv("EXA_API_KEY")
-openai = os.getenv("OPENAI_API_KEY")
+load_dotenv()
+exa_api_key = os.getenv("EXA_API_KEY")
+openai_api_key = os.getenv("OPENAI_API_KEY")
+exa = Exa(api_key=exa_api_key)
+openai = OpenAI(api_key=openai_api_key)
+
+## Google Sheets API setups
+SERVICE_ACCOUNT_FILE = os.getenv("GOOGLE_SERVICE_ACCOUNT_PATH")
+SHEET_NAME = os.getenv("GOOGLE_SHEET_NAME")
+TAB_NAME = os.getenv("GOOGLE_SHEET_TAB_FITTED")
+# Auth
+scope = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive"]
+creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scope)
+google = gspread.authorize(creds)
+# Open sheet and tab
+sheet = google.open(SHEET_NAME).worksheet(TAB_NAME)
 
 def remove_non_fits(job_title):
     '''
@@ -246,6 +265,13 @@ def main():
         print(df_with_fits_scraped['title'])
     else:
         df_with_fits_scraped.to_csv(f"scraped_data/jobs_scraped_fitted_{input_file}.csv", index=False)
+        df_cleaned = (df_with_fits_scraped.replace([float('inf'), float('-inf')], None)
+                            .fillna("")
+                            .infer_objects(copy=False)
+                        )
+
+        sheet.append_rows(df_cleaned.values.tolist(), value_input_option="USER_ENTERED")
+        print("✅ Data appended to Google Sheet!")
     
 
 if __name__ == "__main__":
