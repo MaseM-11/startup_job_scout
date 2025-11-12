@@ -102,20 +102,27 @@ def get_jobs(company_name):
         r = requests.head(url, allow_redirects=True, timeout=5)
         if r.status_code >= 400:
             print(f"⚠️ No gallery page for: {company_name} ({url})")
-            return []
+            return [], None
     except requests.RequestException:
         print(f"⚠️ Connection error for: {company_name} ({url})")
-        return []
+        return [], None
     
     result = exa.get_contents(
       [url],
       text = True,
       summary={
-        "query": "Find all jobs listed and include their titles, locations, dates, and links. Even if it is a lot, include them all",
+        "query": (
+            "Find all jobs listed and include their titles, locations, dates, and links. "
+            "Also report the company's fundraising stage if it is mentioned."
+        ),
         "schema": {
             "description": "Schema describing a collection of job listings",
             "type": "object",
             "properties": {
+                "fundraising_stage": {
+                    "type": "string",
+                    "description": "Company fundraising stage or round"
+                },
                 "jobs": {
                     "type": "array",
                     "description": "List of job listings",
@@ -136,20 +143,22 @@ def get_jobs(company_name):
     
     if not result.results:
         print(f"⚠️ No jobs found for: {company_name} ({url})")
-        return []
+        return [], None
 
     summary = result.results[0].summary
     try:
-        jobs = json.loads(summary)['jobs']
+        parsed_summary = json.loads(summary)
+        jobs = parsed_summary.get('jobs', [])
+        fundraising_stage = parsed_summary.get('fundraising_stage')
     except json.JSONDecodeError:
         print(f"⚠️ Invalid JSON for {company_name}")
-        return []
-    
+        return [], None
+
     if jobs:
         if jobs[0]['title'] == 'View Jobs':
             print('-------------------------')
-            return []
-    return jobs
+            return [], None
+    return jobs, fundraising_stage
 
 
 def process_company(row):
@@ -159,8 +168,8 @@ def process_company(row):
     company_name = row["Company"]
     description = row["Description"]
     url = get_company_url(company_name, description)
-    jobs = get_jobs(company_name)
-    return (company_name, url, jobs)
+    jobs, fundraising_stage = get_jobs(company_name)
+    return (company_name, url, jobs, fundraising_stage)
 
 
 ## ---------------------------------------------------------------- ##
@@ -189,6 +198,7 @@ def main():
     test_df_urls = test_df.copy()
     test_df_urls["URL"] = None
     test_df_urls["Jobs"] = None
+    test_df_urls["Fundraising Stage"] = None
 
     ## Run (num_threads) parrallel calls to Exa
     with ThreadPoolExecutor(max_workers=num_threads) as executor:
@@ -198,20 +208,22 @@ def main():
         for future in as_completed(futures):
             i = futures[future]
             try:
-                company_name, url, job_list = future.result()
+                company_name, url, job_list, fundraising_stage = future.result()
                 test_df_urls.at[i, "URL"] = url
                 test_df_urls.at[i, "Jobs"] = job_list
+                test_df_urls.at[i, "Fundraising Stage"] = fundraising_stage or "Unknown"
             except Exception as e:
                 print(f"⚠️ Error processing company at index {i}: {e}")
                 test_df_urls.at[i, "URL"] = None
                 test_df_urls.at[i, "Jobs"] = []
+                test_df_urls.at[i, "Fundraising Stage"] = "Unknown"
 
     ## Expands the dataframe from one row per company, to one row per job.
     df_expanded = test_df_urls.explode("Jobs", ignore_index=True)
     job_details = pd.json_normalize(df_expanded["Jobs"])
     df_fin = pd.concat([df_expanded.drop(columns=["Jobs"]), job_details], axis=1)
-    df_fin1 = df_fin.dropna()
-    df_final = df_fin1.reset_index(drop=True)
+    df_final = df_fin[df_fin['title'].notna()].reset_index(drop=True)
+    df_final.loc[:, 'Fundraising Stage'] = df_final['Fundraising Stage'].fillna("Unknown")
 
     for col in ['title', 'fit', '']:
         if col not in df_final.columns:

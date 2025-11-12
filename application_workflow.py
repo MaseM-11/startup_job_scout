@@ -12,6 +12,7 @@ INTERESTED_PATH = Path("apply_data/interested_jobs.csv")
 APPLIED_PATH = Path("apply_data/applied_jobs.csv")
 DISPLAY_COLUMNS = [
     "Company",
+    "Fundraising Stage",
     "title",
     "location",
     "date_posted",
@@ -140,12 +141,16 @@ def _format_job_summary(row: pd.Series) -> str:
     """Create a compact markdown summary for the interested workflow."""
     title = row.get("title", "Role")
     company = row.get("Company", "Company")
+    fundraising_stage = row.get("Fundraising Stage", "")
     location = row.get("location", "")
     posted = row.get("date_posted", "")
     score = row.get("final fit", "")
     years = row.get("yrs exp req", "")
 
-    header = f"{company} — {title}"
+    header_company = company
+    if pd.notna(fundraising_stage) and str(fundraising_stage):
+        header_company = f"{company} ({fundraising_stage})"
+    header = f"{header_company} — {title}"
     meta_bits: list[str] = []
     if pd.notna(location) and str(location):
         meta_bits.append(f"📍 {location}")
@@ -164,15 +169,21 @@ def _format_job_markdown(row: pd.Series) -> str:
     """Create detailed markdown for a job row."""
     title = row.get("title", "Role")
     company = row.get("Company", "Company")
+    fundraising_stage = row.get("Fundraising Stage", "")
     location = row.get("location", "Location unknown")
     posted = row.get("date_posted", "")
     score = row.get("final fit", "")
     years = row.get("yrs exp req", "")
 
-    header = f"### {company} — {title}"
+    header_company = company
+    if fundraising_stage:
+        header_company = f"{company} ({fundraising_stage})"
+    header = f"### {header_company} — {title}"
     meta_bits = []
     if location:
         meta_bits.append(f"📍 {location}")
+    if fundraising_stage:
+        meta_bits.append(f"🚀 Stage: {fundraising_stage}")
     if posted:
         meta_bits.append(f"🗓️ {posted}")
     if score != "":
@@ -208,6 +219,8 @@ def _format_job_markdown(row: pd.Series) -> str:
 def load_jobs(data_path):
     """Load and sort job data for display."""
     df = pd.read_csv(data_path)
+    if "Fundraising Stage" not in df.columns:
+        df["Fundraising Stage"] = "Unknown"
     display_cols = [c for c in DISPLAY_COLUMNS if c in df.columns]
     if display_cols:
         df = df[display_cols + [c for c in df.columns if c not in display_cols]]
