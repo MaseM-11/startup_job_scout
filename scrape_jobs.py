@@ -22,7 +22,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import sys
 from pathlib import Path
 
-exa = os.getenv("EXA_API_KEY")
+
+EXA_API_KEY = os.getenv("EXA_API_KEY")
+if not EXA_API_KEY:
+    raise RuntimeError("EXA_API_KEY environment variable is not set.")
+
+exa = Exa(api_key=EXA_API_KEY)
 
 
 def get_company_url(company_name, description):
@@ -220,14 +225,35 @@ def main():
 
     ## Expands the dataframe from one row per company, to one row per job.
     df_expanded = test_df_urls.explode("Jobs", ignore_index=True)
-    job_details = pd.json_normalize(df_expanded["Jobs"])
-    df_fin = pd.concat([df_expanded.drop(columns=["Jobs"]), job_details], axis=1)
-    df_final = df_fin[df_fin['title'].notna()].reset_index(drop=True)
-    df_final.loc[:, 'Fundraising Stage'] = df_final['Fundraising Stage'].fillna("Unknown")
+    df_expanded = df_expanded[df_expanded["Jobs"].notna()].reset_index(drop=True)
 
-    for col in ['title', 'fit', '']:
+    if df_expanded.empty:
+        df_final = pd.DataFrame(columns=list(test_df_urls.columns) + [
+            "title",
+            "location",
+            "date_posted",
+            "link",
+        ])
+    else:
+        job_details = pd.json_normalize(df_expanded["Jobs"])
+        df_final = pd.concat(
+            [
+                df_expanded.drop(columns=["Jobs"]).reset_index(drop=True),
+                job_details.reset_index(drop=True),
+            ],
+            axis=1,
+        )
+
+    for col in ["title", "location", "date_posted", "link", "fit", "fit reason"]:
         if col not in df_final.columns:
             df_final[col] = None
+
+    if "Fundraising Stage" not in df_final.columns:
+        df_final["Fundraising Stage"] = "Unknown"
+    else:
+        df_final.loc[:, "Fundraising Stage"] = df_final["Fundraising Stage"].fillna("Unknown")
+
+    df_final = df_final[df_final["title"].notna()].reset_index(drop=True)
 
     ## FIXME need to save the final dataframe so can use in the other scripts
     if test_mode:
