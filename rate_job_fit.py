@@ -269,8 +269,14 @@ def main():
                             .fillna("")
                             .infer_objects(copy=False)
                         )
-
-        sheet.append_rows(df_cleaned.values.tolist(), value_input_option="USER_ENTERED")
+        df_cleaned = df_cleaned.applymap(
+            lambda x: "\n".join(x) if isinstance(x, list) else str(x)
+        )
+        sheet.append_rows(
+            df_cleaned.values.tolist(),
+            value_input_option="USER_ENTERED",
+            table_range="A1"
+        )
         print("✅ Data appended to Google Sheet!")
     
 

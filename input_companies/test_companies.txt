@@ -1,7 +1,6 @@
+Wonder Studios
+AI-native film studio.
 
-Normal 
-Rethinking semiconductors from the ground up.
 
-
-Yutori
-AI agents for everyday life.
+Runlayer
+Safer way to connect MCPs.

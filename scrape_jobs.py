@@ -203,7 +203,7 @@ def main():
         num_threads = 2
     else:
         test_df = companies
-        num_threads = 10
+        num_threads = 3
 
     test_df_urls = test_df.copy()
     test_df_urls["URL"] = None

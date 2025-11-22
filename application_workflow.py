@@ -429,7 +429,7 @@ def main() -> None:
     base_name = Path(input_file).stem
     df = load_jobs(f'scraped_data/jobs_scraped_fitted_{base_name}.csv')
     demo = build_interface(df)
-    demo.launch()
+    demo.launch(share=True)
 
 
 if __name__ == "__main__":
