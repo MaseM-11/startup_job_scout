@@ -7,6 +7,13 @@ The goal of this project is to make sure I am targeting the optimal subset of al
    - Filter by hard capped seniority requirements --> seniority mismatches are demoralizing and waste lots of time
    - Rate and sort them by skillset / interest match --> spend more time on less (more exciting) applications
 
+## Materials from my Scouting
+Google Sheet -- Jobs
+   https://docs.google.com/spreadsheets/d/1F3anSghPuRGZaRb_HJfYfFBlOcsm50gfx6RcjPAdZgw/edit?usp=sharing
+
+Looker Dashboard
+   https://lookerstudio.google.com/reporting/7113a638-4059-4c1c-a825-15d5c9398530
+
 ## Workflow
 run_all.py takes in company names and brief descriptions, and runs the whole workflow, ending with links to apply.
 
